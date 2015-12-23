@@ -1,0 +1,42 @@
+= Build without compiler config or lombok/mapstruct processor config
+
+[source]
+----
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building test 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ test ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/rmannibu/dev/github/lombokmapstruct/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ test ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to /home/rmannibu/dev/github/lombokmapstruct/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /home/rmannibu/dev/github/lombokmapstruct/src/main/java/test/SimpleMapper.java:[10,5] Unknown property "value" in return type.
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.067s
+[INFO] Finished at: Wed Dec 23 15:48:09 CET 2015
+[INFO] Final Memory: 15M/173M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:compile (default-compile) on project test: Compilation failure
+[ERROR] /home/rmannibu/dev/github/lombokmapstruct/src/main/java/test/SimpleMapper.java:[10,5] Unknown property "value" in return type.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+----
